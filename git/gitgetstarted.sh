@@ -12,7 +12,7 @@ git clone https://github.com/hamidgasmi/training.computerscience.linux.git
 cd training.computerscience.versioncontrol
 git pull https://github.com/hamidgasmi/training.computerscience.linux.git master
 #6 Create a new branch: the new branch is local at this point
-get checkout -b getstartedbranch
+git checkout -b getstartedbranch
 #7 Git Status: Check git status
 git status
 #8 Add all file of the directory to the Git staging area:
