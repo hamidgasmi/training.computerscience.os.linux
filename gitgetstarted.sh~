@@ -6,12 +6,5 @@ git config --global user.name "Hamid Gasmi"
 #3 - Configure the email
 git config --global user.email "mamid1706@hotmail.fr"
 #4 Clone a project: training.computerscience.versioncontrol.git
-cd ~/source/
 git clone https://github.com/hamidgasmi/training.computerscience.versioncontrol.git
-#5 Pull: Ensure our master branch is up-to-date:
-cd training.computerscience.versioncontrol
-git pull https://github.com/hamidgasmi/training.computerscience.versioncontrol.git master
-#6 Create a new branch: the new branch is local at this point
-get checkout -b getstartedbranch
-
 
