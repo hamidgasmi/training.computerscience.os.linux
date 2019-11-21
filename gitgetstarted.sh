@@ -22,7 +22,14 @@ git add ~/source/training.computerscience.versioncontrol/gitgetstarted.sh
 #10 Push stagged files to github
 git commit -m "Get started files for versioncontrol repository"
 git push https://github.com/hamidgasmi/training.computerscience.versioncontrol.git getstartedbranch
+#11 Merge remote branch to remote master branch
+
 #12 Delete the remote branch
 git push -d https://github.com/hamidgasmi/training.computerscience.versioncontrol.git getstartedbranch
-#13 Delete Local branch
+#13 Delete Local branch:
+#13.1 Pull to master branch:
+git pull https://github.com/hamidgasmi/training.computerscience.versioncontrol.git master
+#13.2 Switch to master branch:
+git checkout master
+#13.3 Delete Local branch
 git branch -d gitgetstartedbranch
