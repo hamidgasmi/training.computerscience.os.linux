@@ -13,7 +13,7 @@ curl -o yaml-mode.el https://raw.githubusercontent.com/bbatsov/emacs-dev-kit/mas
 #2.1 Find its location: it is in emacs' "user-init-file" variable
 #### In Emacs, type: C-h v
 #### Type: user-init-file
-#### Result in my current machine: ser-init-file: "/home/hamid/.emacs"
+#### Result in my current machine: user-init-file: "/home/hamid/.emacs"
 #2.2 Modify .emacs file:
 nano /home/hamid/.emacs
 #### add the 2 rows as described in yaml-mode.el file
