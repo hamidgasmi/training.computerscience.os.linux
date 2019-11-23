@@ -1,0 +1,3 @@
+#1. Find emacs "load-path":
+## In Emacs: C-h v
+## then type: load-path
