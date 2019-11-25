@@ -27,5 +27,3 @@ nano ~/.bashrc
 #II.4 To see the current location:
 pwd
 
-#III. Modify Terminal background color:
-
