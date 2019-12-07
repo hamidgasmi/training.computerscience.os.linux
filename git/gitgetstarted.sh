@@ -80,6 +80,18 @@ git reset HEAD gitgetstarted.sh~
 git commit -m "Get started files for linux repository"
 #7.2.
 #7.3. Remove a file from a non-pushed commit:
+#..... Solution 1: Undo commit and keep all files staged
+#..... reset: it's most often used to make a few changes to the latest commit and/or fix its commit message 
+#............ it leaves working tree as it was before.
+#..... soft: it doesn't touch the index file or the working tree at all 
+#........... it resets the head to the previous commit
+git reset --soft HEAD~
+#..... Solution 2: Undo commit and unstage all files 
+git reset HEAD~
+#................ mixed will reset the index but not the working tree:
+#................ The changed files are preserved but not marked for commit 
+#................ It reports what has not been updated.
+git reset --mixed HEAD~
 
 #8. Pushing:
 #8.1. Push all committed files
