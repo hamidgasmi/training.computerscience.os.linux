@@ -78,7 +78,8 @@ git reset HEAD gitgetstarted.sh~
 #7. Commits
 #7.1. Commit staged files:
 git commit -m "Get started files for linux repository"
-#7.2.
+#7.2. Check comitted items
+
 #7.3. Remove a file from a non-pushed commit:
 #..... Solution 1: Undo commit and keep all files staged
 #..... reset: it's most often used to make a few changes to the latest commit and/or fix its commit message 
@@ -92,15 +93,31 @@ git reset HEAD~
 #................ The changed files are preserved but not marked for commit 
 #................ It reports what has not been updated.
 git reset --mixed HEAD~
+#7.4. Fix merging conflits:
+cd repository-folder
+#.... list all files which has marker special marker '<<<<<<<'
+grep -lr '<<<<<<<' .
+#.... If solution is to accept local/our version:
+git checkout --ours ./FILE
+git add ./FILE
+git commit -m "..."
+#.... If solution is to accept remote/other-branch version:
+git checkout --theirs PATH/FILE
 
 #8. Pushing:
 #8.1. Push all committed files
-git push origin  getstartedbranch
+git push origin getstartedbranch
 #8.2. Delete a remote branch from the branch's local git repository:
-git push -d origin startedbranc
+git push -d origin getstartedbranch
 #8.3. Delete a remote branch from any local git location
 git push -d https://github.com/hamidgasmi/training.computerscience.linux.git get 
+#8.4. Delete a remote branch
+git push origin --delete gitgetstartedbranch
 
 #9. Merging:
 #9.1 Merge a remote branch to a remote master branch
-
+git checkout master
+git pull origin master
+git merge getstartedbranch
+git push origin master
+git push origin --delete gitgetstartedbranch
