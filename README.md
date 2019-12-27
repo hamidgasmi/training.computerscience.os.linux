@@ -1,6 +1,14 @@
 # training.computerscience.linux
-## ArgoUML:
+## Git:
+## Docker
+## Linux:
+### ArgoUML:
    Source: https://gist.github.com/henriquemoody/3362789
-## emacs:
+### Emacs:
    Source for how to install yaml mode for emacs: https://github.com/yoshiki/yaml-mode
-## git:
+### Encryption:
+### File management:
+### Network:
+### Security:
+### System (OS):
+
