@@ -19,11 +19,13 @@ ping 10.0.2.9
 #^C (CTL + C) to stop the ping
 #Display the details about the networking cards 
 ifconfig 
-#Interact with HTTP
- curl
- Wget
+#4. Interact with HTTP
+#4.1 Download a file with Curl
+curl https://raw.githubusercontent.com/linuxacademy/content-aws-csa2019/master/lesson_files/07_hybrid_scaling/1_LBandASG/CLBandHealth/cat1.jpg > cat1.jpg
 
- #ssh
+Wget
+
+#5. ssh
  #Log in to your system as the root user: 
 ssh root@server_ip_address
 
