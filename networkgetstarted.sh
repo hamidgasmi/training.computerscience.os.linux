@@ -1,3 +1,7 @@
+#0. Watch the entire Star Wars movie through the CLI :)
+telnet towel.blinkenlights.nl #old command version
+nc towel.blinkenlights.nl 23 #new version without telnet
+
 #1. Network File Sytem
 #1.1. Display all the file systems that are currently mounted
 df -k
