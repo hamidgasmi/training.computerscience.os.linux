@@ -24,3 +24,6 @@ rm -rf FILENAME
 df -h
 lsblk
 
+#Unzip a file
+sudo apt-get install unzip
+unzip file.zip -d destination_folder
