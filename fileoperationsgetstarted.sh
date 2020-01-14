@@ -24,6 +24,9 @@ rm -rf FILENAME
 df -h
 lsblk
 
+#Open a PDF file:
+evince myPDFFile.pdf
+
 #Unzip a file
 sudo apt-get install unzip
 unzip file.zip -d destination_folder
