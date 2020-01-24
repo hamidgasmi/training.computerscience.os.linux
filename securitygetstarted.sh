@@ -12,3 +12,13 @@ chmod 400 MyFile
 chown hamid filename
 #3.3 Modify the owner and group of a file:
 chown hamid:hamid filename
+#4. ssh
+#4.2. ssh Agent forwarding
+#.... Adding the private key (PEM file) to the key chain
+ssh-add -k MyKeyPair.pem
+#.... Check whether the private key is properly added to the key chain
+ssh-add -L
+#.... Access the Bastion Host (Public instance)
+ssh -A user@ec2-3-90-235-45
+#.... Access the private instance
+ssh user@10.0.0.25
