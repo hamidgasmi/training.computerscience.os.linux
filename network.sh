@@ -33,6 +33,16 @@ Wget
  #Log in to your system as the root user: 
 ssh root@server_ip_address
 
-#Services
+#6. Services
 #Status
-service httpd status 
+service httpd status
+
+#7. VPN
+#8. Cyberghost VPN:
+#8.1. Get help:
+cyberghostvpn
+#8.2. Connect to an available country
+sudo cyberghostvpn --traffic --country-code US --connect # USA
+#8.2. Get country codes:
+cyberghostvpn --country-code
+#BE (Belgium); CA (Canada); CH (Switzerland); DZ (Algeria); FR (France); GB (UK) Germany
