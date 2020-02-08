@@ -19,10 +19,20 @@ nohup emacs #nohup runs a commands and ignores hangup signals (see help)
 #II.1. Display current environment variable PS1:
 ###"\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
 echo $PS1
-#II.2. Modify PS1
+#II.3. Modify PS1
 export PS1='\[\033[32m\]\u\[\033[00m\]:$ '
-#II.3. Persist our modification in bashrc
+#II.4. Persist our modification in bashrc
 nano ~/.bashrc
-#II.4 To see the current location:
-pwd
+
+#III. OS related commands
+#III.1. Get the current Ubuntu version:
+lsb_release -a
+#....... Output:
+#....... No LSB modules are available.
+#....... Distributor ID:	Ubuntu
+#....... Description:	Ubuntu 18.04.4 LTS
+#....... Release:	18.04
+#....... Codename:	bionic
+
+
 

@@ -7,7 +7,8 @@ touch myfile.sh
 #3. Create a file of a specific size
 dd if=/dev/zero of=my10GFile.data bs=1M count=10240
 
-	
+# Get current location:
+pwd
 # Change Directory to home:
 cd ~ (home directory) 
 # Rename a directory/file 
