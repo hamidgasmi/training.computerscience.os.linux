@@ -41,8 +41,16 @@ service httpd status
 #8. Cyberghost VPN:
 #8.1. Get help:
 cyberghostvpn
-#8.2. Connect to an available country
-sudo cyberghostvpn --traffic --country-code US --connect # USA
 #8.2. Get country codes:
 cyberghostvpn --country-code
-#BE (Belgium); CA (Canada); CH (Switzerland); DZ (Algeria); FR (France); GB (UK) Germany
+#BE (Belgium); CA (Canada); CH (Switzerland); DZ (Algeria); FR (France); GB (UK) Germany; US (USA)
+#8.2. Connect to an available country
+sudo cyberghostvpn --traffic --country-code US --connect
+#8.3. See all available cities in a given country
+cyberghostvpn --traffic --country-code US
+#8.4. See all available server in a given city
+sudo cyberghostvpn --traffic --country-code US --city Chicago
+#8.5. Connect to a specific server:
+sudo cyberghostvpn --traffic --country-code US --city Chicago --server chicago-s07-i09 -- connect
+#8.6. Get the connection status:
+cyberghostvpn --status
