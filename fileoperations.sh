@@ -27,10 +27,14 @@ touch myfile.sh
 dd if=/dev/zero of=my10GFile.data bs=1M count=10240
 
 #4. Compress/Uncompress a file
-#4.0 Install unzip:
+#4.0.1. Install unzip:
 sudo apt-get install unzip
-#4.1 Unzip a file
+#4.0.2. Install unrar-free:
+sudo apt-get install unrar-free
+#4.1.1. Unzip a file
 unzip file.zip -d destination_folder
+#4.1.2. Unrar a file
+unrar -x file.rar
 
 #5. Miscellaneous
 #5.1 Open a PDF file:
