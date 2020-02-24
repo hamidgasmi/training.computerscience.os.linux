@@ -16,7 +16,7 @@ rm –r DIRECTORYNAME
 #2.4. Remove a file 
 rm -rf FILENAME 
 
-#3. Directories:
+#3. File:
 #3.1. Display files content
 cat file1Name file2Name
 #3.2. Edit a file
@@ -25,6 +25,16 @@ nano myfileName
 touch myfile.sh
 #3.4. Create a file of a specific size
 dd if=/dev/zero of=my10GFile.data bs=1M count=10240
+#3.5. Compare 2 files:
+#3.5.1. diff
+diff -s myFile1 myFile2 # check if 2 files are identitical
+Files myFile1 and myFile2 are identical
+#...... For more details:
+man diff 
+#3.5.2. More commands: 
+man colordiff
+man wdiff
+#https://www.tecmint.com/best-linux-file-diff-tools-comparison/
 
 #4. Compress/Uncompress a file
 #4.0.1. Install unzip:
