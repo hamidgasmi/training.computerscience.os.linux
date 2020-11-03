@@ -53,8 +53,13 @@ git pull origin master
 #5. Branches:
 #5.1. Create a branch and switch to it: it is local at this point
 git checkout -b getstartedbranch
-#5.2. Switch to an existing branch:
+#5.2. Switch to branches:
+# ... Switch to master:
 git checkout master
+# ... Switch to an existing remote branch: 
+# ... track flag let the local branch to track the remote branch from origin
+# ... If track is omitted then the local branch will be detached from the remote branch
+git checkout --track origin/remotebranch
 #5.3. List remote branches
 git branch -r
 #5.4. List local branches
@@ -116,13 +121,16 @@ git commit -m "..."
 git checkout --theirs PATH/FILE
 
 #9. Pushing:
-#9.1. Push all committed files
+#9.1. Push all committed files into a tracked remote branch
 git push origin getstartedbranch
-#9.2. Delete a remote branch from the branch's local git repository:
+#9.2. Push all committed files into a detached remote branch
+#... git checkout origin/remotebranch # Local branch is created without track flag
+git push origin HEAD:remotebranch
+#9.3. Delete a remote branch from the branch's local git repository:
 git push -d origin getstartedbranch
-#9.3. Delete a remote branch from any local git location
+#9.4. Delete a remote branch from any local git location
 git push -d https://github.com/hamidgasmi/training.computerscience.linux.git get 
-#9.4. Delete a remote branch
+#9.5. Delete a remote branch
 git push origin --delete gitgetstartedbranch
 
 #10. Merging:
