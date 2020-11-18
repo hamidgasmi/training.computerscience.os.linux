@@ -1,6 +1,4 @@
 # training.computerscience.linux
-## Git:
-## Docker
 ## Linux:
 ### ArgoUML:
    Source: https://gist.github.com/henriquemoody/3362789
