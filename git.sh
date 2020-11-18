@@ -47,6 +47,8 @@ git remote -v
 #4 Get started with repositories
 #4.1 Clone a remote project: training.computerscience.linux.git
 git clone https://github.com/hamidgasmi/training.computerscience.linux.git
+#4.2 Fetch: Update local git with remote information: e.g., remote branches list (it does not include code)
+git fetch
 #4.2 Pull: Ensure our master branch is up-to-date:
 git pull origin master
 
@@ -59,6 +61,7 @@ git checkout master
 # ... Switch to an existing remote branch: 
 # ... track flag let the local branch to track the remote branch from origin
 # ... If track is omitted then the local branch will be detached from the remote branch
+git fetch
 git checkout --track origin/remotebranch
 #5.3. List remote branches
 git branch -r
