@@ -9,10 +9,12 @@
 
 <details>
 <summary>Process</summary>
+  
 - Every process has 3 communication channels attached to it
 - Standard In (`STDIN`): communicate information into the process (E.g. from CLI to the process)
 - Standard Out (`STDOUT`): communicate information out the process (E.g. from the process to the CLI)
 - Standard In (`STDERR`: communicate errors out the process
+  
 </details>
 
 ### Tools:
