@@ -1,5 +1,4 @@
-# training.computerscience.linux
-## Linux:
+## Linux OS:
 
 ### Encryption:
 ### File management:
