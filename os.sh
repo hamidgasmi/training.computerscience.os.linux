@@ -33,6 +33,14 @@ lsb_release -a
 #....... Description:	Ubuntu 18.04.4 LTS
 #....... Release:	18.04
 #....... Codename:	bionic
-
-
-
+#III. Update + Upgrade + 
+sudo apt-get update
+sudo apt-get upgrade
+#....... Clears the local repository of retrieved package files in /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
+sudo apt-get clean
+#....... Same as "clean" but it only removes files that can no longer be downloaded. It helps to keep your cache from growing too large. 
+sudo apt-get autoclean
+#....... Removes packages that are not longer needed: they're dependencies of installed packages that are now uninstalled.
+apt-get autoremove
+#....... Reboot when needed. E.g. a new Linux kernel is installed to fix security bugs at the kernel level
+sudo reboot
