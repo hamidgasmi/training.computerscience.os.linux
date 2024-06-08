@@ -51,6 +51,11 @@ git clone https://github.com/hamidgasmi/training.computerscience.linux.git
 git fetch
 #4.2 Pull: Ensure our master branch is up-to-date:
 git pull origin master
+#4.3 Renaming default branch
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
 
 #5. Branches:
 #5.1. Create a branch and switch to it: it is local at this point
@@ -99,6 +104,8 @@ git reset HEAD gitgetstarted.sh~
 git commit -m "Get started files for linux repository"
 #8.2. Commit staged files with Subject and Body (empty line between subject and body)
 git commit -m "Add subject" -m " " -m "- Add line 1 for body "- Add line 2 for body"
+
+
 #8.3. Check comitted items
 
 #8.3. Remove a file from a non-pushed commit:
@@ -145,3 +152,6 @@ git pull origin master
 git merge getstartedbranch
 git push origin master
 git push origin --delete gitgetstartedbranch
+
+
+# 99. Others
