@@ -11,34 +11,34 @@ git config --global user.email "hg@hg.com"
 #.... https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md#linux
 #.... Download Debian package: https://github.com/git-ecosystem/git-credential-manager/releases
 sudo dpkg -i <path-to-package>
-#1.4. Configure GCM
+#1.5. Configure GCM
 git-credential-manager configure
 
-#3. GitHub
-#3.1. HTTPS
+#2. Authenticate to GitHub
+#2.1. HTTPS
 #.... Create a token in github
 #.... Clone a repo locally and enter credentials
-#3.2. SSH
-#3.2.1. Checking for existing SSH keys:
+#2.2. SSH
+#2.2.1. Checking for existing SSH keys:
 #...... It should one of the following: id_rsa.pub, id_ecdsa.pub, id_ed25519.pub
 ls -al ~/.ssh
-#3.2.2. Generating a new SSH key and adding it to the ssh-agent:
+#2.2.2. Generating a new SSH key and adding it to the ssh-agent:
 ssh-keygen -t rsa -b 4096 -C "mamid1706@hotmail.fr"
 # > Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
 #......This accepts the default file location.
 # > Enter passphrase (empty for no passphrase): [Type a secure passphrase]
 # > Enter same passphrase again: [Type passphrase again]
-#3.2.3. Adding my ssh key to the ssh-agent
+#2.2.3. Adding my ssh key to the ssh-agent
 #...... Start the ssh-agent in the background:
 eval "$(ssh-agent -s)"
 #...... Add your SSH private key to the ssh-agent:
 ssh-add ~/.ssh/id_rsa
-#3.2.4. Adding a new SSH key to your GitHub account:
+#2.2.4. Adding a new SSH key to your GitHub account:
 #...... Copy the SSH key to my clipboard:
 sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 #...... Create new ssh key in GitHub and past the copied ssh key
-#3.2.5. Switching remote URLs from HTTPS to SSH
+#2.2.5. Switching remote URLs from HTTPS to SSH
 #...... Change the current working directory to my local project
 cd ~/source/training.computerscience.linux/
 #...... Get the name of the remote repository and verify it is using https url:
@@ -51,19 +51,19 @@ git remote -v
 #origin	git@github.com:hamidgasmi/training.computerscience.linux.git (fetch)
 #origin	git@github.com:hamidgasmi/training.computerscience.linux.git (push)
 
-#4. Get started with repositories
-#4.1. Clone a remote project: training.computerscience.linux.git
+#3. Get started with repositories
+#3.1. Clone a remote project: training.computerscience.linux.git
 git clone https://github.com/hamidgasmi/training.computerscience.linux.git
-#4.2. Fetch: Update local git with remote information: e.g., remote branches list (it does not include code)
+#3.2. Fetch: Update local git with remote information: e.g., remote branches list (it does not include code)
 git fetch
-#4.3. Pull: Ensure our master branch is up-to-date:
+#3.3. Pull: Ensure our master branch is up-to-date:
 git pull origin master
-#4.4. Renaming default branch
+#3.4. Renaming default branch
 git branch -m master main
 git fetch origin
 git branch -u origin/main main
 git remote set-head origin -a
-#4.5. Add locally hosted code to GitHub
+#3.5. Add locally hosted code to GitHub
 #.... https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github
 #.... Initialize the Git repository
 git init -b main
