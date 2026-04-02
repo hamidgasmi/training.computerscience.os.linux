@@ -4,6 +4,14 @@ sudo apt-get remove docker docker-engine docker.io
 #1.2 Install the new version of docker
 sudo apt-get install docker.io #Ubuntu/Debian
 yum install docker # RedHat/CentOS
+#1.3 Add user to docker group
+#... Get the list of groups
+getent group
+getent group docker
+#... Create docker group
+sudo groupadd docker
+#... Add current user to docker group
+sudo usermod -aG docker $USER
 #2. Start/stop and automate Docker
 #2.1. Start and Automate Docker
 sudo systemctl start docker
