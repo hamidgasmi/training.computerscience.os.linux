@@ -60,3 +60,7 @@ mysql -uroot -proot -h 172.17.0.2 -P 3306
 #10. Configuration management:
 #11. Data Storage:
 https://severalnines.com/database-blog/mysql-docker-containers-understanding-basics
+
+# Docker build
+docker build -t my-image .
+docker build --no-cache -t my-image
