@@ -7,11 +7,13 @@ sudo apt-get install git -y
 #1.3. Configure Git client
 git config --global user.name "Hamid Gasmi"
 git config --global user.email "hg@hg.com"
-#1.4. Install GCM (git-credential-manager): 
+#1.4. Configure Git to send all output to the terminal (behaviour change starting with version 2.16)
+git config --global core.pager cat
+#1.8. Install GCM (git-credential-manager): 
 #.... https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md#linux
 #.... Download Debian package: https://github.com/git-ecosystem/git-credential-manager/releases
 sudo dpkg -i <path-to-package>
-#1.5. Configure GCM
+#1.9. Configure GCM
 git-credential-manager configure
 
 #2. Authenticate to GitHub
